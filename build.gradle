@@ -27,5 +27,5 @@ idea {
 }
 
 dependencies {
-
+    implementation group: 'org.lwjgl.lwjgl', name: 'lwjgl_util', version: '2.9.3'
 }
