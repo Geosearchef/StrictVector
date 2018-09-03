@@ -139,4 +139,14 @@ public strictfp class StrictVector3f implements StrictVector
 	{
 		return new StrictVector2f(this.x, this.z);
 	}
+
+	@Override
+	public boolean equals(Object other) {
+		return other != null && other instanceof de.geosearchef.strictvector.StrictVector3f && ((de.geosearchef.strictvector.StrictVector3f) other).x == this.x && ((de.geosearchef.strictvector.StrictVector3f) other).y == this.y && ((de.geosearchef.strictvector.StrictVector3f) other).z == this.z;
+	}
+
+	@Override
+	public int hashCode() {
+		return (int)this.x + (int)this.y * 10 + (int)this.z * 100;
+	}
 }

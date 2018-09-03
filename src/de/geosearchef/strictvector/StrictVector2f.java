@@ -115,4 +115,14 @@ public strictfp class StrictVector2f implements StrictVector
 	{
 		return new StrictVector3f(this.x, N, this.y);
 	}
+
+	@Override
+	public boolean equals(Object other) {
+		return other != null && other instanceof StrictVector2f && ((StrictVector2f) other).x == this.x && ((StrictVector2f) other).y == this.y;
+	}
+
+	@Override
+	public int hashCode() {
+		return (int)this.x + (int)this.y * 10;
+	}
 }
